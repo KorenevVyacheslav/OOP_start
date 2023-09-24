@@ -2,7 +2,7 @@
 <?php
  
 interface machine_interface {
-                                         // обязательные методы в дочерних классах
+                                         
     public function move_forward ();     // вперед
     public function move_back();         // назад
     public function beep();              // сигнал
@@ -70,8 +70,8 @@ $car = new auto_bmw ();
 $excavat = new excavator_Kobelco();
 $t_90 = new tank_UVZ();
 
-function make_forward_and_use_speciality (machine $x) {
-          echo nl2br ($x->move_forward ()."\n") ;
+function make_forward_and_use_speciality (machine $x) {                     // функция принимающая объект машины, которая заставляет ехать
+          echo nl2br ($x->move_forward ()."\n") ;                           // и использовать специальность машины
           echo nl2br ($x->speciality ()."\n") ;
 }
 
